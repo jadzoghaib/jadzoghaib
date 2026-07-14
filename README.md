@@ -1,7 +1,12 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=Hey%2C+I'm+Jad+%F0%9F%91%8B;Strategy+%C3%97+Data+%C3%97+Product;Building+at+the+intersection+of+business+%26+tech" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=27&pause=1000&color=7C6CFF&center=true&vCenter=true&width=640&lines=Hi%2C+I'm+Jad+Zoghaib+%F0%9F%91%8B;I+turn+messy+data+into+software+people+can+act+on;Data+%C3%97+Strategy+%C3%97+Product+%E2%80%94+across+industries" alt="typing banner" />
 
+### 🧭 [**Explore my interactive portfolio → jadzoghaib.github.io**](https://jadzoghaib.github.io)
+
+Filter my work by industry, search it, and click straight into live demos.
+
+[![Portfolio](https://img.shields.io/badge/▶_Live_Portfolio-7C6CFF?style=for-the-badge&logoColor=white)](https://jadzoghaib.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jadzoghaib)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jadzoghaib)
 
@@ -9,93 +14,102 @@
 
 ---
 
-## 🗂️ Portfolio
+## 👋 About
 
-### 🤖 Machine Learning & AI
+Business + data-science background. I build at the seam where **strategy meets a working product** — where an analysis stops being a notebook and becomes a system someone actually runs. My work spans **cybersecurity, supply chain, HR, finance, sports, and healthcare** — same craft, different domain.
 
-| Project | What it does | Stack |
-|---------|-------------|-------|
-| [Breast Cancer Detection](https://github.com/jadzoghaib/CC_Breast_Cancer_Detection) | Cloud-deployed ML model for breast cancer classification — AWS final project | Python · Jupyter · AWS |
-| [Disaster Classification (FEMA)](https://github.com/jadzoghaib/Disaster_Classification_FEMA) | Disaster type classification model using FEMA incident data | Python · ML |
-| [Hotel Booking AI](https://github.com/jadzoghaib/Hotel_Booking_AI2) | Predictive analytics for hotel booking cancellations | Python · Jupyter |
-
-### 🛒 Optimization & Operations Research
-
-| Project | What it does | Stack |
-|---------|-------------|-------|
-| [Grocery Shopping Optimizer](https://github.com/jadzoghaib/Grocery-Shopping-Optimizer-PDAI26) | Finds the cheapest combo of stores to complete your grocery list — linear programming meets real life | Python · Lingo |
-
-### 📊 Data Analytics & Visualization
-
-| Project | What it does | Stack |
-|---------|-------------|-------|
-| [Hamlet Data Viz](https://github.com/jadzoghaib/R_Hamlet_DataVizClub) | NLP + visual analysis of Shakespeare's Hamlet — word frequency, sentiment, character networks | R · ggplot2 · HTML |
-| [Text Utils (Team 12)](https://github.com/jadzoghaib/textutils-team12) | NLP toolkit for text manipulation and analysis — collaborative team project | Python |
-
-### ☁️ Cloud & DevOps
-
-| Project | What it does | Stack |
-|---------|-------------|-------|
-| [Breast Cancer Detection](https://github.com/jadzoghaib/CC_Breast_Cancer_Detection) | Cloud-deployed ML pipeline — containerization, deployment, scalability | AWS · Jupyter |
-| [Hello World Server](https://github.com/jadzoghaib/hello-world) | Minimal web server packaged with uv and runnable via uvx — clean modern Python packaging | Python · uv |
-
-### 🏢 Capstone & Industry Projects
-
-| Project | What it does | Stack |
-|---------|-------------|-------|
-| [Sabadell Capstone](https://github.com/jadzoghaib/Sabadell_Capstone) | MIBA Capstone project in collaboration with Sabadell | Python · Analytics |
-| [Valumia SC Alert System](https://github.com/jadzoghaib/jadzoghaib-Valumia_SC_alert_system_implementation) | Supply chain alert system implementation for Valumia | Python |
+- 🌍 Lebanon · UAE · GCC · Europe
+- 💼 Strategy · Product · Data Analytics · Applied AI
+- 🎯 Interested in: process intelligence, operational AI copilots, fintech & sports tech
+- 🔗 **Live portfolio:** [jadzoghaib.github.io](https://jadzoghaib.github.io)
 
 ---
 
-## 🧠 About Me
+## 🚀 Featured Work
 
-- 📍 Lebanon / UAE / GCC / Europe
-- 🎓 Business + Data Science background
-- 💼 Strategy · Product · Financial Modeling · Data Analytics
-- 🌍 Interested in: Fintech · Sports Tech · AI Products
-- 🚀 Currently building: **NIL Marketplace** — AI-powered sponsorship matching
+> 🟢 = live, clickable demo &nbsp;·&nbsp; 🔒 = private (client-style) project, available on request
+
+### 🛡️ Cybersecurity
+| Project | What it does | Stack |
+|---|---|---|
+| **[Aegis — SOC Triage Copilot](https://github.com/jadzoghaib/aegis-soc-triage)** | Multi-source alert ingestion → threat-intel enrichment → incident correlation → dual-classifier severity triage → human-gated containment, every stage a visible n8n workflow | `n8n` `FastAPI` `SQLite` `MITRE ATT&CK` |
+
+### 📦 Supply Chain & Operations
+| Project | What it does | Stack |
+|---|---|---|
+| 🟢 **[ProcessLens](https://jadzoghaib.github.io/processlens/)** · [code](https://github.com/jadzoghaib/processlens) | Celonis-style purchase-to-pay process intelligence on a **1.6M-event** log — process discovery, throughput funnels, conformance checks, spend-weighted opportunity board | `React` `TypeScript` `pandas` `Process Mining` |
+| **[Supply Chain Sentinel](https://github.com/jadzoghaib/supply-chain-sentinel)** | Autonomous supplier-risk watch: GDELT + LLM analysis, scheduled sweeps, geospatial impact scoring, approval-gated client advisories | `FastAPI` `n8n` `GDELT` `LLM` |
+| **[Grocery Shopping Optimizer](https://github.com/jadzoghaib/Grocery-Shopping-Optimizer-PDAI26)** | Linear programming that finds the cheapest combination of stores for a full grocery list | `Python` `LP` |
+
+### 🧑‍💼 HR & Talent
+| Project | What it does | Stack |
+|---|---|---|
+| **[TalentFlow](https://github.com/jadzoghaib/talentflow)** | n8n-orchestrated hiring funnel: LLM profile extraction, cold-start scoring, recruiter review gates that resume paused workflows, weekly calibration | `Node 24` `n8n` `LLM` |
+| 🟢 **[TeamMatch](https://google-talent-project-matching-reco.vercel.app)** · [code](https://github.com/jadzoghaib/Google-Talent-Project-Matching-Recommender-System) | Hybrid recommender staffing engineers to projects at portfolio scale (matrix factorization + content + personality) with a cohesion-aware optimizer | `React` `Recommender` `Optimization` |
+
+### ☁️ Cloud & MLOps
+| Project | What it does | Stack |
+|---|---|---|
+| 🔒 **VaultTech — Forging Line** | End-to-end cloud ML pipeline for an industrial forging line: medallion data architecture → XGBoost on SageMaker → served via ECS/Fargate → Streamlit ops dashboard | `AWS SageMaker` `ECS/Fargate` `XGBoost` `Streamlit` |
+
+### 🏟️ Sports & Media
+| Project | What it does | Stack |
+|---|---|---|
+| 🟢 **[NIL Monetization Platform](https://ioc-nil-monetization-platform-dpm.vercel.app)** · [code](https://github.com/jadzoghaib/IOC-NIL-Monetization-Platform_DPM) | Athlete name-image-likeness platform with AI-assisted sponsorship matching between athletes and brands | `React` `TypeScript` `AI Matching` |
+| 🟢 **[Movie Recommender](https://movie-rec-sys-lovat.vercel.app)** · [code](https://github.com/jadzoghaib/Movie-RecSys) | MovieLens recommender with an EDA archive, a drift-simulation "rabbit hole", and per-recommendation trade-off radars | `TypeScript` `Recommender` |
+
+### 💳 Finance
+| Project | What it does | Stack |
+|---|---|---|
+| **[Credit Default Prediction](https://github.com/jadzoghaib/DS-Finance-Credit-Default-)** | Credit-decision model on a lending dataset — leakage-aware, honest accuracy ceiling, best result from a diverse model stack | `Python` `scikit-learn` |
+| **[Sabadell Capstone](https://github.com/jadzoghaib/Sabadell_Capstone)** | Master's capstone with Banco Sabadell — applied analytics on a real banking problem | `Python` `Analytics` |
+
+### 🩺 Healthcare & Public Safety
+| Project | What it does | Stack |
+|---|---|---|
+| **[Breast Cancer Detection](https://github.com/jadzoghaib/CC_Breast_Cancer_Detection)** | Cloud-deployed, containerized ML classifier — final cloud-computing project | `Python` `AWS` `ML` |
+| **[Disaster Classification (FEMA)](https://github.com/jadzoghaib/Disaster_Classification_FEMA)** | Classifies disaster type from FEMA incident data — public-safety analytics | `Python` `ML` |
+
+<details>
+<summary><b>➕ More projects (AI experiments & data viz)</b></summary>
+
+<br>
+
+| Project | What it does | Stack |
+|---|---|---|
+| [Boardroom Simulator](https://github.com/jadzoghaib/Boardroom_Simulator_PDAI) | AI-driven boardroom decision simulator | `Python` `AI` |
+| [Akinator](https://github.com/jadzoghaib/Akinator_PDAI) | A compact 20-questions inference engine | `Python` |
+| [Hotel Booking AI](https://github.com/jadzoghaib/Hotel_Booking_AI2) | Predictive analytics for booking cancellations | `Python` `ML` |
+| [Hamlet Data Viz](https://github.com/jadzoghaib/R_Hamlet_DataVizClub) | NLP + visual analysis of *Hamlet* — word frequency, sentiment arcs, character networks | `R` `ggplot2` `NLP` |
+
+</details>
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Data & Analytics**
-
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
-
-**Visualization**
-
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=flat-square&logo=r&logoColor=white)
-
-**Cloud & DevOps**
-
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
-![EC2](https://img.shields.io/badge/EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-
-**Tools**
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
 ---
 
-## 📈 GitHub Stats
+## 📈 GitHub
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=jadzoghaib&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jadzoghaib&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=jadzoghaib&show_icons=true&theme=react&hide_border=true&count_private=true&bg_color=0A0B10&title_color=7C6CFF&icon_color=4F9CF9" alt="GitHub stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jadzoghaib&layout=compact&theme=react&hide_border=true&bg_color=0A0B10&title_color=7C6CFF" alt="Top languages" />
 
 </div>
 
@@ -103,8 +117,10 @@
 
 <div align="center">
 
-Open to collaborating on data, product, and strategy projects.
+### Let's build something.
+Open to roles and collaborations in **data, product, and applied AI** — across any industry.
 
-[![LinkedIn](https://img.shields.io/badge/Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jadzoghaib)
+[![Explore Portfolio](https://img.shields.io/badge/🧭_Explore_the_Portfolio-7C6CFF?style=for-the-badge)](https://jadzoghaib.github.io)
+[![Connect](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jadzoghaib)
 
 </div>
