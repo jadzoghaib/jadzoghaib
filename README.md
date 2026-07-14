@@ -104,12 +104,17 @@ Business + data-science background. I build at the seam where **strategy meets a
 
 ---
 
-## 📈 GitHub
+## 📊 By the numbers
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=jadzoghaib&show_icons=true&theme=react&hide_border=true&count_private=true&bg_color=0A0B10&title_color=7C6CFF&icon_color=4F9CF9" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jadzoghaib&layout=compact&theme=react&hide_border=true&bg_color=0A0B10&title_color=7C6CFF" alt="Top languages" />
+![Projects](https://img.shields.io/badge/Projects-17-7C6CFF?style=for-the-badge&labelColor=0A0B10)
+![Industries](https://img.shields.io/badge/Industries-9-4F9CF9?style=for-the-badge&labelColor=0A0B10)
+![Live demos](https://img.shields.io/badge/Live_demos-4-2FBFA4?style=for-the-badge&labelColor=0A0B10)
+![End-to-end builds](https://img.shields.io/badge/End--to--end_builds-6-E3A13C?style=for-the-badge&labelColor=0A0B10)
+
+[![Followers](https://img.shields.io/github/followers/jadzoghaib?style=flat-square&logo=github&logoColor=white&label=Followers&color=7C6CFF&labelColor=0A0B10)](https://github.com/jadzoghaib?tab=followers)
+[![Explore the portfolio](https://img.shields.io/badge/Explore-jadzoghaib.github.io-4F9CF9?style=flat-square&labelColor=0A0B10)](https://jadzoghaib.github.io)
 
 </div>
 
