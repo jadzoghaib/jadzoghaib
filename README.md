@@ -33,6 +33,7 @@ Business + data-science background. I build at the seam where **strategy meets a
 | Project | What it does | Stack |
 |---|---|---|
 | **[Aegis — SOC Triage Copilot](https://github.com/jadzoghaib/aegis-soc-triage)** | Multi-source alert ingestion → threat-intel enrichment → incident correlation → dual-classifier severity triage → human-gated containment, every stage a visible n8n workflow | `n8n` `FastAPI` `SQLite` `MITRE ATT&CK` |
+| ↳ **[Interactive threat manual](https://jadzoghaib.github.io/aegis-soc-triage/threat-manual.html)** | The 14 techniques the demo injects, mapped to MITRE ATT&CK — each with a clickable architecture diagram: select a machine or a connection to see the code that runs there and the traffic it emits | `SVG` `ATT&CK` |
 
 ### 📦 Supply Chain & Operations
 | Project | What it does | Stack |
