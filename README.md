@@ -27,8 +27,6 @@ Business + data-science background. I build at the seam where **strategy meets a
 
 ## 🚀 Featured Work
 
-> 🟢 = opens instantly &nbsp;·&nbsp; 🟡 = hosted on Streamlit's free tier, so the first click wakes it (~30s) &nbsp;·&nbsp; 🔒 = private (client-style) project, available on request
-
 ### 🧬 Healthcare & Life Sciences
 | Project | What it does | Stack |
 |---|---|---|
