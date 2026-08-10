@@ -41,7 +41,7 @@ Business + data-science background. I build at the seam where **strategy meets a
 |---|---|---|
 | 🟢 **[ProcessLens](https://jadzoghaib.github.io/processlens/)** · [code](https://github.com/jadzoghaib/processlens) | Celonis-style purchase-to-pay process intelligence on a **1.6M-event** log — process discovery, throughput funnels, conformance checks, spend-weighted opportunity board | `React` `TypeScript` `pandas` `Process Mining` |
 | **[Supply Chain Sentinel](https://github.com/jadzoghaib/supply-chain-sentinel)** | Autonomous supplier-risk watch: GDELT + LLM analysis, scheduled sweeps, geospatial impact scoring, approval-gated client advisories | `FastAPI` `n8n` `GDELT` `LLM` |
-| **[Grocery Shopping Optimizer](https://github.com/jadzoghaib/Grocery-Shopping-Optimizer-PDAI26)** | Linear programming that finds the cheapest combination of stores for a full grocery list | `Python` `LP` |
+| 🟡 **[GroceryAI](https://grocery-shopping-optimizer-pdai26.onrender.com)** · [code](https://github.com/jadzoghaib/Grocery-Shopping-Optimizer-PDAI26) | Full-stack nutrition and grocery app: meal planning, LLM shopping-list generation against real Mercadona supermarket data, a fridge-to-recipe engine, a body optimizer, a health feed, and a multi-agent basket debate — all one SPA over a FastAPI server | `FastAPI` `LangGraph` `Groq LLM` `Python` |
 
 ### 🛡️ Cybersecurity
 | Project | What it does | Stack |
@@ -118,7 +118,7 @@ Business + data-science background. I build at the seam where **strategy meets a
 
 ![Projects](https://img.shields.io/badge/Projects-20-7C6CFF?style=for-the-badge&labelColor=0A0B10)
 ![Industries](https://img.shields.io/badge/Industries-10-4F9CF9?style=for-the-badge&labelColor=0A0B10)
-![Live demos](https://img.shields.io/badge/Live_demos-8-2FBFA4?style=for-the-badge&labelColor=0A0B10)
+![Live demos](https://img.shields.io/badge/Live_demos-9-2FBFA4?style=for-the-badge&labelColor=0A0B10)
 ![End-to-end builds](https://img.shields.io/badge/End--to--end_builds-9-E3A13C?style=for-the-badge&labelColor=0A0B10)
 
 [![Followers](https://img.shields.io/github/followers/jadzoghaib?style=flat-square&logo=github&logoColor=white&label=Followers&color=7C6CFF&labelColor=0A0B10)](https://github.com/jadzoghaib?tab=followers)
