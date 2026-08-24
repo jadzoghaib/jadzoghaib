@@ -1,6 +1,6 @@
 # Jad Zoghaib
 
-**Strategy and analytics professional.** Four years of management consulting across MENA in TMT, energy, healthcare and industrials, now completing an MSc in Business Analytics at ESADE (9.1/10). The repositories below are the build side of that: process intelligence, root-cause analysis, and AI pipelines with human approval gates, each taken through to something that runs rather than something that reports.
+**Strategy and analytics professional.** Four years of management consulting across MENA in TMT, energy, healthcare and industrials, now completing an MSc in Business Analytics at ESADE. The repositories below are the build side of that: process intelligence, root-cause analysis, and AI pipelines with human approval gates, each taken through to something that runs rather than something that reports.
 
 **Open to** strategy and analytics, data and AI consulting, AI product, and analytics roles.
 **Based in** Barcelona. Open to remote and to GCC roles.
