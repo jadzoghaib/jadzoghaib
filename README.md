@@ -1,9 +1,10 @@
 # Jad Zoghaib
 
-**Data scientist and AI product builder.** I work on operational and scientific problems where the answer has to end up as something a person can run. Recent work concentrates on clinical genomics and process intelligence: evidence provenance, root-cause analysis, and AI pipelines with human approval gates. Business and data-science background, so the work gets scoped around a decision rather than a metric.
+**Strategy and analytics professional.** Four years of management consulting across MENA in TMT, energy, healthcare and industrials, now completing an MSc in Business Analytics at ESADE (9.1/10). The repositories below are the build side of that: process intelligence, root-cause analysis, and AI pipelines with human approval gates, each taken through to something that runs rather than something that reports.
 
-**Open to** data science, applied AI / AI product, analytics engineering, and data & AI consulting roles.
-**Based in** Barcelona, Spain. Open to remote and to GCC roles.
+**Open to** strategy and analytics, data and AI consulting, AI product, and analytics roles.
+**Based in** Barcelona with a Spanish work permit. Open to remote and to GCC roles.
+**Languages** Arabic (native), English and French (fluent), Spanish (advanced).
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-jadzoghaib.github.io-4F9CF9?style=for-the-badge&labelColor=0A0B10)](https://jadzoghaib.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-in%2Fjadzoghaib-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A0B10)](https://linkedin.com/in/jadzoghaib)
@@ -17,6 +18,8 @@ Five projects, in the order I would open them.
 ### 1. Mendelea: an evidence timeline for reported genetic variants
 
 [Code](https://github.com/jadzoghaib/mendelea)
+
+My MSc thesis at ESADE, taken past the model into implementation planning, commercialisation, and a seven-year financial model.
 
 A laboratory signs out a genetic variant, writes a report, and moves on. Years later the evidence underneath that report has changed and nothing tells them. Mendelea reconstructs what ClinVar asserted on any past date and reports what has moved since. It reports that the evidence moved and never asserts a classification. Research use only, not a medical device.
 
