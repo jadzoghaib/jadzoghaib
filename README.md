@@ -3,7 +3,7 @@
 **Strategy and analytics professional.** Four years of management consulting across MENA in TMT, energy, healthcare and industrials, now completing an MSc in Business Analytics at ESADE (9.1/10). The repositories below are the build side of that: process intelligence, root-cause analysis, and AI pipelines with human approval gates, each taken through to something that runs rather than something that reports.
 
 **Open to** strategy and analytics, data and AI consulting, AI product, and analytics roles.
-**Based in** Barcelona with a Spanish work permit. Open to remote and to GCC roles.
+**Based in** Barcelona. Open to remote and to GCC roles.
 **Languages** Arabic (native), English and French (fluent), Spanish (advanced).
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-jadzoghaib.github.io-4F9CF9?style=for-the-badge&labelColor=0A0B10)](https://jadzoghaib.github.io)
