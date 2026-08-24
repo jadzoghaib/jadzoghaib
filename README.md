@@ -1,9 +1,9 @@
 # Jad Zoghaib
 
-**Data scientist and AI product builder.** I work on operational and scientific problems where the answer has to end up as something a person can run: process intelligence, root-cause analysis, and AI pipelines with human approval gates. Business and data-science background, so the work gets scoped around a decision rather than a metric.
+**Data scientist and AI product builder.** I work on operational and scientific problems where the answer has to end up as something a person can run. Recent work concentrates on clinical genomics and process intelligence: evidence provenance, root-cause analysis, and AI pipelines with human approval gates. Business and data-science background, so the work gets scoped around a decision rather than a metric.
 
 **Open to** data science, applied AI / AI product, analytics engineering, and data & AI consulting roles.
-**Based across** Lebanon, UAE / GCC, and Europe. Open to remote.
+**Based in** Barcelona, Spain. Open to remote and to GCC roles.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-jadzoghaib.github.io-4F9CF9?style=for-the-badge&labelColor=0A0B10)](https://jadzoghaib.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-in%2Fjadzoghaib-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A0B10)](https://linkedin.com/in/jadzoghaib)
@@ -12,31 +12,33 @@
 
 ## Start here
 
-Three projects that show the whole range: the business framing, the analysis, and the working tool. Each one runs live in a browser.
+Five projects, in the order I would open them.
 
-### 1. ProcessLens: purchase-to-pay process intelligence
+### 1. Mendelea: an evidence timeline for reported genetic variants
 
-**[Live demo](https://jadzoghaib.github.io/processlens/)** · [Code](https://github.com/jadzoghaib/processlens) · [Methodology](https://github.com/jadzoghaib/processlens/blob/main/METHODOLOGY.md)
+[Code](https://github.com/jadzoghaib/mendelea)
 
-A Celonis-style cockpit over the BPI Challenge 2019 purchase-to-pay event log: 1,595,923 events, 251,734 cases, €1.56B of observed spend. Cross-filtered process maps, throughput funnels, conformance checks, and drill-downs to individual case traces.
+A laboratory signs out a genetic variant, writes a report, and moves on. Years later the evidence underneath that report has changed and nothing tells them. Mendelea reconstructs what ClinVar asserted on any past date and reports what has moved since. It reports that the evidence moved and never asserts a classification. Research use only, not a medical device.
 
-**What the analysis found.** Median order-to-pay is 77 days, and the invoice-to-payment leg owns most of it (42d median, 97d at p90). 22% of cases pass through a manual payment-block release, covering €397M of spend. 13,881 distinct process variants, which says the process is under-standardised rather than slow in one place.
+**The number I had to throw away.** Raw movement first read 67.1%. Almost all of it was a single ClinVar re-aggregation event that relabelled 5,843 variants in one nine-week window, which is the database changing how it aggregates rather than laboratories revising anything. True actionable movement is 7.2%. Telling a lab that 5,843 of its cases moved would have sent it re-reviewing thousands of files for nothing. `reports/policy.py` now detects that class of event automatically, and the adjustment is reported rather than quietly applied.
 
-**Why it holds up.** The pandas ETL that computes every number ships in the same repo, the artifacts regenerate byte for byte from the raw log, and every metric definition is written down.
+**Isolation enforced by reading the source.** A multi-tenant query once shipped with no tenant predicate, so a properly authenticated caller would have received every laboratory's data. A test now walks the AST of every source file and fails the build if any SQL naming a tenant-owned table omits `tenant_id`. That catches queries nobody thought to call.
 
-`React 19` `TypeScript` `pandas` `process mining`
+Also worth a look: ingest pulls one gene out of a 19.1 MB ClinVar release over HTTP range requests, 98.1% saved, with BGZF and tabix readers written in pure Python because pysam does not build on Windows. The limitations register at the bottom of the README is the part I would read first.
 
-### 2. Batch Investigation Console: root-cause analysis for pharma manufacturing
+`Python` `DuckDB` `bitemporal modelling` `ClinVar` `multi-tenancy`
 
-**[Live demo](https://jadzoghaib-batch-traceability-root-cause-studio-for--app-zrys7k.streamlit.app/)** · [Code](https://github.com/jadzoghaib/Batch-Traceability-Root-Cause-Studio-for-Pharma-Manufacturing)
+### 2. Stride: a sponsorship marketplace priced on evidence
 
-Traces tablet quality back to incoming raw-material attributes and in-process compression conditions across 1,005 real production batches.
+[Code](https://github.com/jadzoghaib/stride)
 
-**The finding that shaped the product.** 22 of 44 candidate drivers *reverse their correlation sign* between pooled and within-product analysis. Product identity alone explains 85% of hardness variance. A standard pooled "top correlations" chart would send a quality investigator after exactly the wrong condition, so every comparison in the tool is scoped to a structurally comparable cohort instead.
+Sponsorship is priced on assertion. An athlete says they have reach, a brand takes the number on faith or pays an agency to guess, and nobody on either side of the table can decompose the price.
 
-**Two more decisions worth reading.** Batches are scored only against the control limits that existed at the moment of manufacture; scoring with hindsight instead flips the verdict on 394 of 1,005 batches. And evidence stays in three separate tiers (descriptive, association, model) rather than being fused into one confidence score, with a driver promoted only when two tiers agree.
+**What it does differently.** Marketability is computed from connected platforms through a versioned formula set, and every score carries its inputs, its coverage and its confidence. A sponsor who disagrees with a score can open it and see precisely which posts produced it. The commercial claim follows from the technical one: a marketplace whose prices are explainable lets both sides negotiate against evidence instead of reputation.
 
-`Python` `Streamlit` `pandas` `random forest` `root-cause analysis`
+Athletes own their analytics, sponsors match campaign briefs against the athlete pool, clubs sell packages. First product draft, 35 tests, runs locally in two terminals with a self-seeding database.
+
+`FastAPI` `React 18` `Supabase` `Python 3.11`
 
 ### 3. Locus: target and variant intelligence for drug discovery
 
@@ -44,9 +46,29 @@ Traces tablet quality back to incoming raw-material attributes and in-process co
 
 Two linked questions over one ontology. Which variants in a gene look misclassified, by reconciling AlphaMissense predictions against ClinVar's clinical assertions on AlphaFold structure and grading how much structural evidence actually backs each call. And whether a target is worth pursuing, by assembling genetic evidence, structural readiness, binding-site tractability and clinical activity into one dossier where every fact resolves back to the retrieval that produced it.
 
-**The constraint it is built around.** It surfaces candidates for expert review and never asserts a clinical classification. That is enforced in code, not just stated: a test fails if any review outcome reads as a clinical call. Rebuilt from source weekly, with 218 tests across core rules, governance, and the exported site.
+**The constraint it is built around.** It surfaces candidates for expert review and never asserts a clinical classification. That is enforced in code, not just stated: a test fails if any review outcome reads as a clinical call. Rebuilt from source weekly, with 218 tests across core rules, governance and the exported site.
 
 `Python` `DuckDB` `AlphaFold` `AlphaMissense` `ClinVar` `Open Targets` `3Dmol.js`
+
+### 4. ProcessLens: purchase-to-pay process intelligence
+
+**[Live demo](https://jadzoghaib.github.io/processlens/)** · [Code](https://github.com/jadzoghaib/processlens) · [Methodology](https://github.com/jadzoghaib/processlens/blob/main/METHODOLOGY.md)
+
+A Celonis-style cockpit over the BPI Challenge 2019 event log: 1,595,923 events, 251,734 cases, €1.56B of observed spend, with cross-filtered process maps and drill-downs to individual case traces.
+
+**What the analysis found.** Median order-to-pay is 77 days and the invoice-to-payment leg owns most of it (42d median, 97d at p90). 22% of cases pass through a manual payment-block release, covering €397M of spend. 13,881 distinct process variants, which says the process is under-standardised rather than slow in one place. The pandas ETL that computes every number ships in the same repo and the artifacts regenerate byte for byte from the raw log.
+
+`React 19` `TypeScript` `pandas` `process mining`
+
+### 5. Aegis: SOC alert triage copilot
+
+[Code](https://github.com/jadzoghaib/aegis-soc-triage) · **[Documentation hub](https://jadzoghaib.github.io/aegis-soc-triage/)**
+
+Multi-source alert ingestion, threat-intel enrichment with an offline fallback, incident correlation, dual-classifier severity triage, and containment that a human has to approve. Every stage is a visible workflow rather than a black box, which is the point: an analyst can see why an alert was escalated and stop it before anything is contained.
+
+The documentation hub carries an interactive threat manual mapping 14 techniques to MITRE ATT&CK, each with a clickable architecture diagram, plus the six workflow specs and the incident lifecycle.
+
+`n8n` `FastAPI` `SQLite` `MITRE ATT&CK`
 
 ---
 
@@ -54,7 +76,7 @@ Two linked questions over one ontology. Which variants in a gene look misclassif
 
 | Project | What it does | Stack |
 |---|---|---|
-| **[Aegis: SOC triage copilot](https://github.com/jadzoghaib/aegis-soc-triage)** · [docs hub](https://jadzoghaib.github.io/aegis-soc-triage/) | Alert ingestion, threat-intel enrichment, incident correlation, dual-classifier severity triage, and human-gated containment. Every stage is a visible workflow, and 14 techniques are mapped to MITRE ATT&CK in the interactive manual | `n8n` `FastAPI` `SQLite` `MITRE ATT&CK` |
+| **[Batch Investigation Console](https://jadzoghaib-batch-traceability-root-cause-studio-for--app-zrys7k.streamlit.app/)** · [code](https://github.com/jadzoghaib/Batch-Traceability-Root-Cause-Studio-for-Pharma-Manufacturing) | Root-cause analysis across 1,005 real pharmaceutical production batches. 22 of 44 candidate drivers reverse their correlation sign between pooled and within-cohort analysis, so a standard pooled correlation chart sends the investigator after the wrong condition. Batches are scored only against the control limits that existed at the time of manufacture; scoring with hindsight flips the verdict on 394 of them | `Python` `Streamlit` `random forest` |
 | **[Supply Chain Sentinel](https://github.com/jadzoghaib/supply-chain-sentinel)** | Autonomous supplier-risk watch: GDELT ingestion, LLM risk analysis, scheduled per-supplier sweeps, geospatial impact scoring, approval-gated client advisories | `FastAPI` `n8n` `GDELT` `LLM` |
 | **[CineMatch](https://movie-rec-sys-lovat.vercel.app)** · [code](https://github.com/jadzoghaib/Movie-RecSys) | MovieLens recommender with several algorithms behind one registry-driven interface: add a model and it appears in the API, the evaluation harness and the UI. Taste map, discovery slider, metrics lab | `Next.js` `FastAPI` `recommenders` |
 | **[TeamMatch](https://google-talent-project-matching-reco.vercel.app)** · [code](https://github.com/jadzoghaib/Google-Talent-Project-Matching-Recommender-System) | Staffs a whole pipeline at once rather than ranking one match: matrix factorization plus content and personality scoring, feeding a cohesion-aware portfolio optimizer over 800 engineers and 300 projects | `TypeScript` `recommenders` `optimization` |
@@ -91,7 +113,6 @@ Two linked questions over one ontology. Which variants in a gene look misclassif
 | Project | What it does | Stack |
 |---|---|---|
 | [TalentFlow](https://github.com/jadzoghaib/talentflow) | Hiring funnel on the TeamMatch engine: LLM profile extraction, cold-start match scoring, recruiter review gates that resume paused workflows, and weekly calibration | `Node 24` `n8n` `LLM` |
-| [Stride](https://github.com/jadzoghaib/stride) | Athlete and club monetisation platform: evidence-based marketability analytics, sponsor campaign matching with fully decomposable scoring, and a deal pipeline that runs end to end | `FastAPI` `React` `Supabase` |
 | [My Match Olympics](https://ioc-nil-monetization-platform-dpm.vercel.app) · [code](https://github.com/jadzoghaib/IOC-NIL-Monetization-Platform_DPM) | Three-sided fan-economy concept for the Olympic Games: fans discover athletes by personality match, athletes run content and sponsorship offers from one studio, sponsors scout by sport, country and audience fit. Independent student project, not affiliated with the IOC | `React` `TypeScript` |
 | [Boardroom Simulator](https://github.com/jadzoghaib/Boardroom_Simulator_PDAI) | Eight-quarter startup simulation: quarterly events across six departments, LLM advisor chats, five fundraising stages, rival dynamics, and an ML success predictor scored at board reviews | `Python` `LLM` |
 | [Hamlet Data Viz](https://github.com/jadzoghaib/R_Hamlet_DataVizClub) | Word frequency, sentiment arcs and character networks across the play | `R` `ggplot2` `NLP` |
@@ -102,13 +123,13 @@ Two linked questions over one ontology. Which variants in a gene look misclassif
 
 ## How I build
 
-Most of these follow the same shape. Frame the decision first, get the data honest before modelling it, keep the uncertainty visible instead of collapsing it into a single score, and ship a running interface rather than a notebook. Where a pipeline makes a call that is hard to undo, a person approves it.
+Most of these follow the same shape. Frame the decision first, get the data honest before modelling it, keep the uncertainty visible instead of collapsing it into a single score, and ship a running interface rather than a notebook. Where a pipeline makes a call that is hard to undo, a person approves it. Every one of these repos has a limitations section, and it is usually the section I would want read.
 
-**Tools I actually use:** Python, SQL, pandas, scikit-learn, TypeScript/React, FastAPI, DuckDB, n8n, Streamlit, AWS (SageMaker, ECS), Docker, R.
+**Tools I actually use:** Python, SQL, pandas, scikit-learn, DuckDB, TypeScript/React, FastAPI, n8n, Streamlit, AWS (SageMaker, ECS), Docker, R.
 
 ## Currently building
 
-[**Stride**](https://github.com/jadzoghaib/stride), a sponsorship marketplace for athletes and clubs, built around marketability analytics a sponsor can actually audit.
+[**Mendelea**](https://github.com/jadzoghaib/mendelea), the variant evidence timeline above, and [**Stride**](https://github.com/jadzoghaib/stride).
 
 ---
 
