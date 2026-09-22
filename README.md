@@ -17,17 +17,19 @@ Five projects, in the order I would open them.
 
 ### 1. Mendelea: an evidence timeline for reported genetic variants
 
-[Code](https://github.com/jadzoghaib/mendelea)
+**[Live demo](https://mendelea-630108657434.europe-southwest1.run.app)** · [Code](https://github.com/jadzoghaib/mendelea)
 
 My MSc thesis at ESADE, taken past the model into implementation planning, commercialisation, and a seven-year financial model.
 
 A laboratory signs out a genetic variant, writes a report, and moves on. Years later the evidence underneath that report has changed and nothing tells them. Mendelea reconstructs what ClinVar asserted on any past date and reports what has moved since. It reports that the evidence moved and never asserts a classification. Research use only, not a medical device.
 
-**The number I had to throw away.** Raw movement first read 67.1%. Almost all of it was a single ClinVar re-aggregation event that relabelled 5,843 variants in one nine-week window, which is the database changing how it aggregates rather than laboratories revising anything. True actionable movement is 7.2%. Telling a lab that 5,843 of its cases moved would have sent it re-reviewing thousands of files for nothing. `reports/policy.py` now detects that class of event automatically, and the adjustment is reported rather than quietly applied.
+**The number I had to throw away.** On the five-gene panel, raw movement first read 67.1%. Almost all of it was a single ClinVar re-aggregation event that relabelled 5,843 of those variants in one nine-week window, which is the database changing how it aggregates rather than laboratories revising anything. True actionable movement is 7.2%. Telling a lab that 5,843 of its cases moved would have sent it re-reviewing thousands of files for nothing. `reports/policy.py` now detects that class of event automatically, and the adjustment is reported rather than quietly applied.
+
+**Every figure names its gene set, because movement is panel-dependent.** The live demo runs the 31-gene hereditary-cancer panel across 18 ClinVar releases from December 2018 to December 2025. There the same re-aggregation sweeps 6,083 variants and actionable movement is 4.6%. Per gene it runs from 19.7% on TP53 down to 3.4% on EPCAM. A claim about how much moves says nothing without naming what it moved across, which is why the demo puts the panel in the header.
 
 **Isolation enforced by reading the source.** A multi-tenant query once shipped with no tenant predicate, so a properly authenticated caller would have received every laboratory's data. A test now walks the AST of every source file and fails the build if any SQL naming a tenant-owned table omits `tenant_id`. That catches queries nobody thought to call.
 
-Also worth a look: ingest pulls one gene out of a 19.1 MB ClinVar release over HTTP range requests, 98.1% saved, with BGZF and tabix readers written in pure Python because pysam does not build on Windows. The limitations register at the bottom of the README is the part I would read first.
+Also worth a look: ingest pulls just the panel's genes out of each ClinVar release over HTTP range requests, 146 MB across all eighteen instead of the 1.25 GB they weigh, with BGZF and tabix readers written in pure Python because pysam does not build on Windows. The limitations register at the bottom of the README is the part I would read first.
 
 `Python` `DuckDB` `bitemporal modelling` `ClinVar` `multi-tenancy`
 
@@ -132,7 +134,7 @@ Most of these follow the same shape. Frame the decision first, get the data hone
 
 ## Currently building
 
-[**Mendelea**](https://github.com/jadzoghaib/mendelea), the variant evidence timeline above, and [**Stride**](https://github.com/jadzoghaib/stride).
+[**Mendelea**](https://github.com/jadzoghaib/mendelea), the variant evidence timeline above, now [deployed and open to anyone](https://mendelea-630108657434.europe-southwest1.run.app) with no sign-in, and [**Stride**](https://github.com/jadzoghaib/stride).
 
 ---
 
